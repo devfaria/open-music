@@ -1,1 +1,53 @@
 /* Faixa de preço */
+
+#filter-price {
+  max-width: 64rem; 
+  margin: auto;
+  margin-top: 3.75rem; 
+}
+
+.price-label {
+  font-size: 1.5rem; 
+  line-height: 1.815rem; 
+  font-weight: 600;
+  color: var(--gray-color2);
+}
+
+.div-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem; 
+  margin-bottom: 2rem; 
+}
+
+.div-price p {
+  font-weight: 600;
+  line-height: 1.664rem; 
+  font-size: 1.375rem;
+}
+
+.price-input {
+  margin-bottom: 2rem; 
+}
+
+#id_do_seu_input {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  background-color: var(--brand-color1);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+#id_do_seu_input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1.875rem; 
+  width: 1.875rem; 
+  background-color: #fff;
+  border-radius: 50%;
+  border: 0.5rem solid var(--brand-color1); 
+}

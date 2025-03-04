@@ -1,1 +1,83 @@
-/* Álbuns */
+#albums {
+  display: flex;
+  max-width: 64rem;
+  height: 58.125rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+}
+
+.title-albums {
+  max-width: 64rem;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  margin-bottom: 0.4375rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.815rem;
+  color: var(--gray-color2);
+}
+
+.img-albums {
+  width: 19.25rem;
+  height: 18.125rem;
+}
+
+.album-card {
+  background-color: var(--gray-color7);
+  margin-top: 1.125rem;
+  border-radius: 0.3125rem;
+  height: 28rem;
+}
+
+.album-title {
+  font-size: 1.375rem;
+  line-height: 1.664rem;
+  font-weight: 600;
+  padding: 0.3125rem 1rem;
+  gap: 0.625rem;
+  max-width: 23.75rem;
+  height: 2.3125rem;
+  color: var(--gray-color2);
+}
+
+.band-music {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.21rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 1rem;
+  max-width: 19.25rem;
+  height: 1.6875rem;
+}
+
+.album-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 17.25rem;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.4525rem;
+  color: var(--gray-color2);
+  margin-top: 0.4375rem;
+}
+
+.button-buy {
+  border-radius: 0.25rem;
+  border: 0.0625rem solid var(--brand-color2);
+  background-color: var(--brand-color2);
+  color: white;
+  width: 5.4375rem;
+  height: 2.5rem;
+}
+
+.button-buy:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+}

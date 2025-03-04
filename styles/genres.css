@@ -1,1 +1,54 @@
-/* Gêneros */
+.filter-genre {
+    display: flex;
+    margin: auto;
+    margin-top: 5.5rem;
+    max-width: 64rem;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .button-genre {
+    max-width: 64rem;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    gap: 0.625rem;
+    height: 4rem;
+  }
+  
+  .title-genre {
+    width: 100%;
+    display: flex;
+    font-size: 1.5rem;
+    line-height: 1.815rem;
+    font-weight: 600;
+    margin-top: 3.75rem;
+  }
+  
+  .genre-button-black {
+    width: auto;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: var(--gray-color2);
+    color: var(--gray-color7);
+    padding: 0.4375rem 0.7rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.21rem;
+  }
+  
+  .genre-button {
+    width: auto;
+    border-radius: 0.25rem;
+    border: none;
+    margin: 0.6375rem 0.7rem;
+    padding: 0.4375rem 0.7rem;
+    background-color: var(--gray-color6);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.21rem;
+  }
+  

@@ -23,10 +23,12 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
       <!-- SEÇÃO DE FILTRO POR GÊNERO -->
-      <section id="filter-genre">
+
+      <section class="filter-genre">
         <h2 class="title-genre">Gênero Musical</h2>
-        <legend class="sr-only">Escolha o gênero musical</legend>
-        <button class="genre-button genre-button-black">Todos</button>
+      </section>
+      <section class="button-genre">
+        <button class="genre-button-black">Todos</button>
         <button class="genre-button">Pop</button>
         <button class="genre-button">MPB</button>
         <button class="genre-button">Forró</button>
@@ -38,9 +40,14 @@
 
       <!-- SEÇÃO DE FILTRO POR PREÇO E ÁLBUNS -->
       <section id="filter-price">
-        <h2 class="title-price">Definir Preço</h2>
-        <p class="price-label">Até <span class="high-light">R$100</span></p>
+        <div class="div-price">
+          <h2 class="price-label">Definir Preço</h2>
+          <p>Até <span class="high-light">R$100</span></p>
+        </div>
+
         <input
+          id="id_do_seu_input"
+          class="price-input"
           type="range"
           min="0"
           max="100"
@@ -48,8 +55,10 @@
         />
       </section>
 
-      <section id="albums">
+      <section>
         <h2 class="title-albums">Álbuns Encontrados</h2>
+      </section>
+      <section id="albums">
         <article class="album-card">
           <img
             class="img-albums"
@@ -57,10 +66,14 @@
             alt="Capa do álbum Acabou o Chorare"
           />
           <h3 class="album-title">Acabou o Chorare</h3>
-          <p class="band-music">Novos Baianos</p>
-          <p class="band-genre">MPB</p>
-          <p class="album-price">R$ 137,91</p>
-          <button class="buy-button">Comprar</button>
+          <div class="band-music">
+            <p>Novos Baianos</p>
+            <p>MPB</p>
+          </div>
+          <div class="album-price">
+            <p class="price">R$ 137,91</p>
+            <button class="button-buy">Comprar</button>
+          </div>
         </article>
 
         <article class="album-card">
@@ -70,10 +83,14 @@
             alt="Capa do álbum The Wall"
           />
           <h3 class="album-title">The Wall</h3>
-          <p class="band-music">Pink Floyd</p>
-          <p class="band-genre">Rock</p>
-          <p class="album-price">R$ 123,56</p>
-          <button class="buy-button">Comprar</button>
+          <div class="band-music">
+            <p>Pink Floyd</p>
+            <p>Rock</p>
+          </div>
+          <div class="album-price">
+            <p class="price">R$ 123,56</p>
+            <button class="button-buy">Comprar</button>
+          </div>
         </article>
 
         <article class="album-card">
@@ -83,10 +100,14 @@
             alt="Capa do álbum To Pimp a Butterfly"
           />
           <h3 class="album-title">To Pimp a Butterfly</h3>
-          <p class="band-music">Kendrick Lamar</p>
-          <p class="band-genre">Rap</p>
-          <p class="album-price">R$ 102,66</p>
-          <button class="buy-button">Comprar</button>
+          <div class="band-music">
+            <p>Kendrick Lamar</p>
+            <p>Rap</p>
+          </div>
+          <div class="album-price">
+            <p class="price">R$ 102,66</p>
+            <button class="button-buy">Comprar</button>
+          </div>
         </article>
 
         <article class="album-card">
@@ -96,10 +117,14 @@
             alt="Capa do álbum Acabou o Chorare"
           />
           <h3 class="album-title">Acabou o Chorare</h3>
-          <p class="band-music">Novos Baianos</p>
-          <p class="band-genre">MPB</p>
-          <p class="album-price">R$ 137,91</p>
-          <button class="buy-button">Comprar</button>
+          <div class="band-music">
+            <p>Novos Baianos</p>
+            <p>MPB</p>
+          </div>
+          <div class="album-price">
+            <p class="price">R$ 137,91</p>
+            <button class="button-buy">Comprar</button>
+          </div>
         </article>
 
         <article class="album-card">
@@ -109,10 +134,14 @@
             alt="Capa do álbum The Wall"
           />
           <h3 class="album-title">The Wall</h3>
-          <p class="band-music">Pink Floyd</p>
-          <p class="band-genre">Rock</p>
-          <p class="album-price">R$ 123,56</p>
-          <button class="buy-button">Comprar</button>
+          <div class="band-music">
+            <p>Pink Floyd</p>
+            <p>Rock</p>
+          </div>
+          <div class="album-price">
+            <p class="price">R$ 123,56</p>
+            <button class="button-buy">Comprar</button>
+          </div>
         </article>
 
         <article class="album-card">
@@ -122,10 +151,14 @@
             alt="Capa do álbum Butterfly"
           />
           <h3 class="album-title">To Pimp a Butterfly</h3>
-          <p class="band-music">Kendrick Lamar</p>
-          <p class="band-genre">Rap</p>
-          <p class="album-price">R$ 102,66</p>
-          <button class="buy-button">Comprar</button>
+          <div class="band-music">
+            <p>Kendrick Lamar</p>
+            <p>Rap</p>
+          </div>
+          <div class="album-price">
+            <p class="price">R$ 102,66</p>
+            <button class="button-buy">Comprar</button>
+          </div>
         </article>
       </section>
     </main>
