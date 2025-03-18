@@ -15,6 +15,14 @@
     --font: "Inter", serif;
 } 
 
+.dark-mode{
+    --gray-color6:#212529;
+    --gray-color2:#F1F3F5;
+    --gray-color8: #15171A;
+    --gray-color7: #212529;
+    --gray-color3:#F1F3F5;
+}
+
 body {
     font-family: var(--font);
     background-color: var(--gray-color8); 

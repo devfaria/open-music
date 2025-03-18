@@ -5,13 +5,13 @@
     transform: translateX(-50%);
     width: 100%; 
     max-width: 64.25rem; 
-    background-color: white;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     padding-top: 3rem;
     padding-bottom: 3rem;
     border-bottom: 0.1875rem solid var(--brand-color2);
+    background-color: var(--gray-color8);
 }
 
 .header-title{
@@ -21,7 +21,7 @@
     color: var(--gray-color2);
 }
 
-.high-light{
+.high-light-header{
     color: var(--brand-color2);
 }
 

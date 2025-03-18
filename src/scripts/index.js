@@ -1,13 +1,12 @@
-/* Script Global */
-import { applyInputRangeStyle, } from './inputRange.js'
+import { applyInputRangeStyle } from './inputRange.js'
 import { albumList } from './albumsDatabase.js'
+import toggleTheme from './theme.js';
 
 function routine() {
     applyInputRangeStyle();
 }
 
 routine();
-
 
 function createAlbumCard(album) {
     const card = document.createElement('article');
@@ -58,9 +57,51 @@ function displayAlbums() {
         const albumCard = createAlbumCard(album);
         albumContainer.appendChild(albumCard);
     });
+
+
+    initFilter();
 }
 
+function initFilter() {
+    const priceFilter = document.getElementById('id_do_seu_input');
+    const priceValue = document.querySelector('.high-light');
+
+
+    priceFilter.max = 150;
+
+    const updatePrice = () => {
+        const selectedPrice = parseFloat(priceFilter.value);
+
+
+        priceValue.textContent = `R$${selectedPrice.toFixed(2).replace('.', ',')}`;
+
+
+        const albums = document.querySelectorAll('.album-card');
+
+        albums.forEach(album => {
+            const priceText = album.querySelector('.price')?.textContent || '';
+            const albumPrice = parseFloat(priceText.replace('R$', '').replace(',', '.'));
+
+            if (!isNaN(albumPrice)) {
+                if (albumPrice <= selectedPrice) {
+                    album.style.display = 'block';
+                } else {
+                    album.style.display = 'none';
+                }
+            }
+        });
+    };
+
+
+    priceFilter.value = priceFilter.max;
+
+    updatePrice();
+
+
+    priceFilter.addEventListener('input', updatePrice);
+}
 
 document.addEventListener('DOMContentLoaded', displayAlbums);
-
-
+document.addEventListener('DOMContentLoaded', () => {
+    toggleTheme();
+});
