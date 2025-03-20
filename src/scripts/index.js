@@ -1,6 +1,9 @@
+
 import { applyInputRangeStyle } from './inputRange.js'
 import { albumList } from './albumsDatabase.js'
+import { fetchAlbums } from "./api.js";
 import toggleTheme from './theme.js';
+
 
 function routine() {
     applyInputRangeStyle();
@@ -105,3 +108,33 @@ document.addEventListener('DOMContentLoaded', displayAlbums);
 document.addEventListener('DOMContentLoaded', () => {
     toggleTheme();
 });
+
+
+async function renderAlbums() {
+    const albumList = await fetchAlbums();
+    const container = document.getElementById("albums");
+
+    container.innerHTML = "";
+
+    albumList.forEach(album => {
+        const albumElement = document.createElement("article");
+        albumElement.classList.add("album-card");
+        albumElement.innerHTML = `
+            <img class="img-albums" src="${album.img}" alt="Capa do álbum ${album.title}" />
+            <h3 class="album-title">${album.title}</h3>
+            <div class="band-music">
+                <p>${album.band}</p>
+                <p>${album.genre}</p>
+            </div>
+            <div class="album-price">
+                <p class="price">R$ ${parseFloat(album.price).toFixed(2).replace(".", ",")}</p>
+                <button class="button-buy">Comprar</button>
+            </div>
+        `;
+        container.appendChild(albumElement);
+    });
+}
+
+
+document.addEventListener("DOMContentLoaded", renderAlbums);
+
